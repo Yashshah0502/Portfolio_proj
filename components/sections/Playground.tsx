@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Puzzle from "@/components/ui/Puzzle";
 import AgentWidget from "@/components/ui/AgentWidget";
+import MatchingPuzzle from "@/components/ui/MatchingPuzzle";
 
 export default function Playground() {
   return (
@@ -21,7 +22,7 @@ export default function Playground() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-3 gap-8 items-start">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -29,6 +30,15 @@ export default function Playground() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <Puzzle />
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <MatchingPuzzle />
           </motion.div>
 
           <motion.div

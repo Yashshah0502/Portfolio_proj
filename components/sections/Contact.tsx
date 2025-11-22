@@ -29,7 +29,7 @@ export default function Contact() {
               <span>hello@yashshah.dev</span>
             </a>
             <a
-              href="https://linkedin.com/in/yashshah"
+              href="https://www.linkedin.com/in/yash0502/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-gray-300 hover:text-blue-400 transition-colors"

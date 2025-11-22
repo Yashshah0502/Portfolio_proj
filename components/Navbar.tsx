@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { Menu, X, Terminal } from "lucide-react";
 import { cn } from "@/lib/utils";
+import ViewToggle from "@/components/ui/ViewToggle";
 
 const navItems = [
   { name: "About", to: "about" },
@@ -46,7 +47,9 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
+          <ViewToggle />
+          
           {navItems.map((item) => (
             <Link
               key={item.name}

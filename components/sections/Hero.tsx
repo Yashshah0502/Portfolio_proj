@@ -71,7 +71,7 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
             </span>
-            Open to roles in AI / Full-Stack / Data
+            Open to AI Engineer / Full-Stack / Data Roles
           </div>
         </motion.div>
 

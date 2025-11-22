@@ -4,6 +4,9 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+import { ViewModeProvider } from "@/context/ViewModeContext";
+import StatsPanel from "@/components/ui/StatsPanel";
+
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -23,9 +26,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans bg-black text-white antialiased`}>
-        <Navbar />
-        {children}
-        <Footer />
+        <ViewModeProvider>
+          <Navbar />
+          {children}
+          <StatsPanel />
+          <Footer />
+        </ViewModeProvider>
       </body>
     </html>
   );

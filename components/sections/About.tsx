@@ -16,15 +16,16 @@ export default function About() {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
             <div className="space-y-4 text-gray-300 leading-relaxed">
               <p>
-                I&apos;m an AI Engineer passionate about bridging the gap between cutting-edge research and real-world applications. 
-                With a background in Data Engineering and Full-Stack Development, I understand the entire lifecycle of an AI product—from data ingestion to user interface.
+                I&apos;m an AI Engineer and Full-Stack Developer with a Master&apos;s in Information Technology from Arizona State University (4.0 GPA). 
+                I specialize in building autonomous agents, RAG pipelines, and scalable full-stack applications.
               </p>
               <p>
-                Currently, I&apos;m focused on building autonomous agents that can reason, plan, and execute complex tasks. 
-                I believe the future of software lies in systems that can understand intent and act on it.
+                Currently, I&apos;m an IT Business Analyst Intern at Zydus Pharmaceuticals, where I build multi-agent systems in Microsoft Teams 
+                to automate complex data reporting. Previously, I&apos;ve engineered data solutions for ASU and the NYC Department of Finance.
               </p>
               <p>
-                When I&apos;m not coding, you can find me reading about the latest LLM advancements, tinkering with home automation, or hiking.
+                I thrive on solving hard problems—whether it&apos;s optimizing ETL pipelines for millions of records or fine-tuning LLMs for 
+                semantic search. My goal is to build systems that don&apos;t just work, but think.
               </p>
             </div>
           </motion.div>

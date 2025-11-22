@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { skills } from "@/data/skills";
+import TechRadar from "@/components/ui/TechRadar";
 
 export default function Skills() {
   return (
@@ -20,29 +21,40 @@ export default function Skills() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {skills.map((category, index) => (
-            <motion.div
-              key={category.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-black/40 border border-white/5 rounded-xl p-6 hover:border-blue-500/30 transition-colors"
-            >
-              <h3 className="text-xl font-bold text-blue-400 mb-6">{category.title}</h3>
-              <div className="flex flex-wrap gap-3">
-                {category.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-3 py-1.5 bg-zinc-800 text-gray-300 text-sm rounded-lg border border-white/5 hover:bg-zinc-700 hover:text-white transition-colors cursor-default"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+        <div className="grid lg:grid-cols-3 gap-12 items-start">
+          <div className="lg:col-span-2 grid md:grid-cols-2 gap-8">
+            {skills.map((category, index) => (
+              <motion.div
+                key={category.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-black/40 border border-white/5 rounded-xl p-6 hover:border-blue-500/30 transition-colors"
+              >
+                <h3 className="text-xl font-bold text-blue-400 mb-6">{category.title}</h3>
+                <div className="flex flex-wrap gap-3">
+                  {category.skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="px-3 py-1.5 bg-zinc-800 text-gray-300 text-sm rounded-lg border border-white/5 hover:bg-zinc-700 hover:text-white transition-colors cursor-default"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <TechRadar />
+          </motion.div>
         </div>
       </div>
     </section>
