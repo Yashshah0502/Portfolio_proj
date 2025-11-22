@@ -19,7 +19,7 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Technical Skills (Enhanced)</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Technical Skills</h2>
             <p className="text-gray-400 max-w-2xl">
               A comprehensive breakdown of my stack, from AI models to frontend frameworks, showcasing expertise across the full tech spectrum. Explore the tools and technologies that power my projects.
             </p>

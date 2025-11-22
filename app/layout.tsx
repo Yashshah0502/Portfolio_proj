@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-import { ViewModeProvider } from "@/context/ViewModeContext";
+
 import StatsPanel from "@/components/ui/StatsPanel";
 import CommandPalette from "@/components/ui/CommandPalette";
 import { Analytics } from "@vercel/analytics/react";
@@ -72,14 +72,12 @@ export default function RootLayout({
         ` }} />
       </head>
       <body className={`${inter.variable} ${jetbrainsMono.variable} font-sans bg-black text-white antialiased`} suppressHydrationWarning>
-        <ViewModeProvider>
-          <Navbar />
-          {children}
-          <StatsPanel />
-          <CommandPalette />
-          <Footer />
-          <Analytics />
-        </ViewModeProvider>
+        <Navbar />
+        {children}
+        <StatsPanel />
+        <CommandPalette />
+        <Footer />
+        <Analytics />
       </body>
     </html>
   );

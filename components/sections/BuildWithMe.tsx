@@ -29,7 +29,7 @@ export default function BuildWithMe() {
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3 text-gray-300">
                   <Zap className="text-yellow-400" size={20} />
-                  <span>Rapid Prototyping & MVP Development</span>
+                  <span>Prototyping & MVP Development</span>
                 </div>
                 <div className="flex items-center gap-3 text-gray-300">
                   <Clock className="text-green-400" size={20} />
@@ -37,7 +37,7 @@ export default function BuildWithMe() {
                 </div>
                 <div className="flex items-center gap-3 text-gray-300">
                   <Code2 className="text-purple-400" size={20} />
-                  <span>Full-Stack + AI Integration Specialist</span>
+                  <span>Full-Stack + AI Integration</span>
                 </div>
               </div>
 

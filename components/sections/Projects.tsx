@@ -19,7 +19,7 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects (Enhanced)</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
             <p className="text-gray-400 max-w-2xl">
               A curated showcase of my most impactful AI agents, data pipelines, and full-stack applications, each with detailed architecture and insights. Click on a project to explore its design and outcomes.
             </p>

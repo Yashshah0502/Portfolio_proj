@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import ViewToggle from "./ui/ViewToggle";
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -91,11 +91,8 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="flex items-center gap-4">
-          <div className="hidden md:flex items-center gap-2 px-3 py-1.5 bg-zinc-900 border border-white/10 rounded-md text-xs text-gray-400 font-mono">
-            <span className="text-xs">⌘</span>K
-          </div>
-          <ViewToggle />
+        <div className="hidden md:flex items-center gap-2 px-3 py-1.5 bg-zinc-900 border border-white/10 rounded-md text-xs text-gray-400 font-mono">
+          <span className="text-xs">⌘</span>K
         </div>
 
         {/* Mobile Menu Button */}

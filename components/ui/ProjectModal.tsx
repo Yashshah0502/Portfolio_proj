@@ -13,10 +13,7 @@ interface ProjectModalProps {
 }
 
 export default function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
-  const [viewMode, setViewMode] = useState<"recruiter" | "engineer">("recruiter");
   const [activeTab, setActiveTab] = useState<"overview" | "architecture" | "highlights">("overview");
-  
-  const description = viewMode === "recruiter" ? project.recruiterDescription : project.engineerDescription;
 
   if (!isOpen) return null;
 
@@ -141,7 +138,7 @@ export default function ProjectModal({ project, isOpen, onClose }: ProjectModalP
                       <User size={18} className="text-blue-400" /> The Challenge & Solution
                     </h3>
                     <p className="text-gray-300 leading-relaxed text-lg">
-                      {description}
+                      {project.recruiterDescription}
                     </p>
                   </div>
                   
