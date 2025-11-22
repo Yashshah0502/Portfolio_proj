@@ -3,9 +3,23 @@
 @tailwind utilities;
 
 @layer base {
-  /* Disable smooth scroll on initial load */
-  html {
+  /* NUCLEAR OPTION: Force page to always start at top */
+  html, body {
     scroll-behavior: auto !important;
+    overflow-x: hidden;
+  }
+  
+  /* Prevent ANY scroll restoration */
+  html {
+    overflow-y: scroll;
+    scroll-padding-top: 0;
+  }
+  
+  /* Force initial position */
+  @supports (overscroll-behavior: none) {
+    html {
+      overscroll-behavior: none;
+    }
   }
   
   button, a {

@@ -9,13 +9,17 @@ export default function IntroOverlay() {
   const fullText = "> INITIALIZING SYSTEM...\n> LOADING MODULES...\n> ACCESS GRANTED.";
 
   useEffect(() => {
-    // Immediate scroll reset
-    window.scrollTo(0, 0);
+    // AGGRESSIVE: Force scroll to 0 immediately and continuously
+    const forceScrollTop = () => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    };
     
-    // Also reset after a tiny delay to catch browser scroll restoration
-    setTimeout(() => window.scrollTo(0, 0), 0);
-    setTimeout(() => window.scrollTo(0, 0), 10);
-    setTimeout(() => window.scrollTo(0, 0), 50);
+    forceScrollTop();
+    
+    // Keep forcing it every 10ms during intro
+    const scrollInterval = setInterval(forceScrollTop, 10);
     
     // Lock scroll during intro
     document.body.style.overflow = "hidden";
@@ -30,12 +34,14 @@ export default function IntroOverlay() {
           setShow(false);
           // Unlock scroll smoothly
           document.body.style.overflow = "unset";
+          clearInterval(scrollInterval);
         }, 800);
       }
     }, 30);
 
     return () => {
       clearInterval(interval);
+      clearInterval(scrollInterval);
       document.body.style.overflow = "unset";
     };
   }, []);
